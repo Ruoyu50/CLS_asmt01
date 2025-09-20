@@ -3,44 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homeless</title>
+    <title>Reality</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="banner">
         <a href="index.html">HOME</a>
+        <a href="01.html">Reality</a>
+        <a href="02.html">Dream</a>
     </div>
     <div class="container2">
         <div class="img1">
-            <img src="loss/16.jpg" alt="">
+            <img src="loss/16.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
+            <span class="label">Loss</span>
         </div>
         <div class="img2">
-            <img src="loss/4.jpg" alt="">
+            <img src="loss/4.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
         </div>
         <div class="img3">
-            <img src="anxity/21.jpg" alt="">
+            <img src="anxity/21.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
         </div>
         <div class="img4">
-            <img src="loss/2.jpg" alt="">
+            <img src="loss/2.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
         </div>
         <div class="img5">
-            <img src="digital_addiction/9.jpg" alt="">
+            <img src="digital_addiction/9.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
         </div>
         <div class="img6">
-            <img src="digital_addiction/26.jpg" alt="">
+            <img src="digital_addiction/26.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
         </div>
         <div class="img7">
-            <img src="digital_addiction/10.jpg" alt="">
+            <img src="digital_addiction/10.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
         </div>
         <div class="img8">
-            <img src="heavy_work/17.jpg" alt="">
+            <img src="heavy_work/17.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
         </div>
         <div class="img9">
-            <img src="homeless/6.jpg" alt="">
+            <img src="homeless/6.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
         </div>
         <div class="img10">
-            <img src="angry_boss/5.jpg" alt="">
+            <img src="angry_boss/5.jpg" alt="" onclick="openPreview(this)">
+            <div id="preview" class="preview">
+                <span onclick="closePreview()" class="close">&times;</span>
+                <img id="preview-img" src="" alt="">
+            </div>
         </div>
     </div>
+    <script>
+        function openPreview(img) {
+            document.getElementById("preview").style.display = "flex";
+            document.getElementById("preview-img").src = img.src;
+        }
+        function closePreview() {
+            document.getElementById("preview").style.display = "none";
+        }
+    </script>
 </body>
 </html>

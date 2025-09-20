@@ -175,8 +175,7 @@ body {
     font-size: 40px;
     cursor: pointer;
 }
-
-/* 桌面端：保留 hover 效果 */
+/* 
 @media (hover: hover) and (pointer: fine) {
   .container1 img:hover {
     transform: scale(1.1) rotate(3deg);
@@ -185,11 +184,10 @@ body {
   }
 }
 
-/* 移动端：禁用 hover，避免点击冲突 */
 @media (hover: none) and (pointer: coarse) {
   .container1 img:hover {
     transform: none;
     filter: none;
     opacity: 1;
   }
-}
+} */
