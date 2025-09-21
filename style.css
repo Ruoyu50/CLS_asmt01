@@ -44,14 +44,14 @@ body {
     transition: all 0.2s ease;
 }
 
+.banner a:visited{
+    color: gray;
+}
+
 .banner a:hover{
     /* background: #555; */
     color: white;
     transform: scale(1.25);
-}
-
-.banner a:visited{
-    color: gray;
 }
 
 .container1{
