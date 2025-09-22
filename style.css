@@ -156,7 +156,7 @@ h1 a:hover{
 
 .container1 .img6{grid-row: 3/5;grid-column: 2/4;}
 
-.container1 .img7{grid-row: 3/5;grid-column: 4/6;}
+.container1 .img7{grid-row: 3/5;grid-column: 4/6; justify-content: center;}
 
 .container1 .img8{grid-row: 3/5;grid-column: 7/8;}
 
