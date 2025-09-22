@@ -230,11 +230,7 @@ h1 a:hover{
     border-radius: 5px;
 }
 
-.preview-active .container1 img {
-    pointer-events: none;
-}
-
-.preview-active .container2 img {
+.preview-active .container1 img, .preview-active .container2 img, .preview-active .container3 img {
     pointer-events: none;
 }
 
