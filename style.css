@@ -266,21 +266,76 @@ h1 a:hover{
     opacity: 1;
   }
 } */
- @media (max-width: 768px) {
-    .container1, .container2, .container3{
-    /* border: 0.5px dotted orange; */
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 2fr;
-    margin: 0px;
-    padding-top: 30px;
-    height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    /* place-items:center; */
-    /* 应用在grid item上不是照片上 */
+@media (max-width: 430px) {
+    html {
+        height: auto;
+        min-height: 100vh;
     }
-    .container1 > div, .container2 > div, .container3 > div{
-        height: 150px;
+    
+    /* 修改body样式，允许滚动 */
+    body {
+        display: block;
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto; /* 允许垂直滚动 */
+        overflow-x: hidden; /* 防止横向滚动 */
+    }
+    
+    .container1, .container2, .container3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 两列布局 */
+        grid-auto-rows: auto; /* 让行高完全自适应内容 */
+        gap: 10px; /* 添加间距 */
+        margin: 0;
+        padding: 40px 10px 20px 10px; /* 顶部为banner留空间，左右留边距 */
+        width: 100%;
+        box-sizing: border-box;
+        /* 移除height限制，让内容自然流动 */
+    }
+    
+    /* 重置所有图片项的grid定位，让它们自然排列 */
+    .container1 .img1, .container1 .img2, .container1 .img3, .container1 .img4, .container1 .img5, 
+    .container1 .img6, .container1 .img7, .container1 .img8, .container1 .img9, .container1 .img10,
+    .container2 .img1, .container2 .img2, .container2 .img3, .container2 .img4, .container2 .img5, 
+    .container2 .img6, .container2 .img7, .container2 .img8, .container2 .img9, .container2 .img10,
+    .container3 .img1, .container3 .img2, .container3 .img3, .container3 .img4, .container3 .img5, 
+    .container3 .img6, .container3 .img7, .container3 .img8, .container3 .img9, .container3 .img10 {
+        grid-row: auto;
+        grid-column: auto;
+        /* 移除aspect-ratio限制，让容器适应图片比例 */
+        /* 移除min-height限制，让高度完全由图片决定 */
+    }
+    
+    .container1 .img10 img, .container3 .img7 img {
+    all: unset;   /* 清除所有声明过的样式 */
+    display: block;  /* 然后只加上你需要的 */
+    width: 100%;
+    height: auto;
+  }
+
+    /* 确保图片在移动端正确显示，保持原始比例 */
+    .container1 img, .container2 img, .container3 img {
+        width: 100%;
+        height: auto; /* 改为auto，让高度根据图片比例自适应 */
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* 移动端banner字体大小调整 */
+    .banner {
+        font-size: 16px;
+        height: 35px;
+        padding: 0 10px;
+    }
+    
+    .banner a {
+        margin-right: 15px;
+    }
+    
+    /* 移动端禁用hover效果，避免触摸问题 */
+    .container1 img:hover, .container2 img:hover, .container3 img:hover {
+        transform: none;
+        filter: none;
+        opacity: 1;
     }
 }
